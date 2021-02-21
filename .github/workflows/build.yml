@@ -1,0 +1,39 @@
+name: Daily Spotlight and Moonlight Build
+
+on:
+  schedule:
+    - cron: "10 14 * * *"
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+    - name: Checkout Submodules
+      uses: textbook/git-checkout-submodule-action@master
+    - name: Run Scripts
+      run: |
+        nuget_restore.cmd
+        build.cmd
+        zip.cmd
+      shell: cmd
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Zips
+        path: |
+          'Spotlight Release.zip'
+          'Spotlight Debug.zip'
+          'Moonlight Debug.zip'
+          'Moonlight Release.zip'
+    - name: Make a release     
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Latest Daily Build"
+        files: |
+          *.zip
