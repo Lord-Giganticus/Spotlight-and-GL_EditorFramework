@@ -1,0 +1,2 @@
+nuget restore Spotlight\Spotlight.sln
+nuget restore GL_EditorFramework\GL_EditorFramework.sln
