@@ -22,12 +22,8 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: Zips
-        path: |
-          'Spotlight Release.zip'
-          'Spotlight Debug.zip'
-          'Moonlight Debug.zip'
-          'Moonlight Release.zip'
+        name: Release
+        path: Release.zip
     - name: Make a release     
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -36,4 +32,4 @@ jobs:
         prerelease: false
         title: "Latest Daily Build"
         files: |
-          *.zip
+          Release.zip
