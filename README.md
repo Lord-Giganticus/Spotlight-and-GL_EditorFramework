@@ -9,4 +9,4 @@ A "Fork" of Spotlight intended to make compiling much easier.
 - [nuget](https://www.nuget.org) installed to PATH. (Should be added to PATH if you have Visual Studio 2017 or higher)
 - [7zip](https://www.7-zip.org/)'s command line installed to PATH. (Default location should be `C:\Program Files\7-Zip`)
 - Steps:
-- Run `Update_Submodules.cmd`, then `nuget_restore.cmd`, then `build.cmd`, and finally `zip.cmd`. Then, take the zips with you where you want!
+- Run cmd.exe in the repo folder with this: `Update_Submodules.cmd && nuget_restore.cmd && build.cmd && zip.cmd`
