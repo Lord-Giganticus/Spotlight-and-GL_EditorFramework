@@ -12,10 +12,9 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v2
-    - name: Checkout Submodules
-      uses: textbook/git-checkout-submodule-action@master
     - name: Run Scripts
       run: |
+        Update_Submodules.cmd
         nuget_restore.cmd
         build.cmd
         zip.cmd
