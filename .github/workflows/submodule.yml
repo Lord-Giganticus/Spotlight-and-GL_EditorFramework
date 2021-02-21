@@ -1,5 +1,3 @@
-# This is a basic workflow that is manually triggered
-
 name: Daily Submodule Check
 
 on:
