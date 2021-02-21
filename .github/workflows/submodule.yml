@@ -1,0 +1,25 @@
+# This is a basic workflow that is manually triggered
+
+name: Daily Submodule Check
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Clone Repo
+      uses: actions/checkout@v2
+    - name: Run cmd file
+      run: Update_Submodules.cmd
+      shell: cmd
+    - name: Update Repo
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add *
+        git commit -m "Update Submodules" -a
