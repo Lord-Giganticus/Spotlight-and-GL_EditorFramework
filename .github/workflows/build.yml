@@ -12,6 +12,10 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v2
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+      with:
+        vs-version: '16.5'
     - name: Run Scripts
       run: Update_Submodules.cmd && nuget_restore.cmd && build.cmd && zip.cmd
       shell: cmd
