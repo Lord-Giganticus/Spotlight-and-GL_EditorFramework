@@ -1,0 +1,6 @@
+[submodule "Spotlight"]
+	path = Spotlight
+	url = https://github.com/jupahe64/Spotlight.git
+[submodule "GL_EditorFramework"]
+	path = GL_EditorFramework
+	url = https://github.com/jupahe64/GL_EditorFramework.git
