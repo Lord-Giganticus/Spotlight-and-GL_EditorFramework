@@ -23,11 +23,16 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Release
-        path: Release.zip
-        
-#   - name: Installers
-    # run: nsis.cmd
-    # shell: cmd
+        path: Release.zip 
+    - name: Make Installers
+      run: nsis.cmd
+      shell: cmd
+    - name: Upload NSIS exe files
+      with: 
+        name: NSIS exe files
+        path: |
+          Moonlight.exe
+          Spotlight.exe
     - name: Make a release     
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -37,3 +42,5 @@ jobs:
         title: "Latest Daily Build"
         files: |
           Release.zip
+          Moonlight.exe
+          Spotlight.exe
