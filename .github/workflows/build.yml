@@ -17,21 +17,14 @@ jobs:
       with:
         vs-version: '16.5'
     - name: Run Scripts
-      run: Update_Submodules.cmd && nuget_restore.cmd && build.cmd && zip.cmd
+      run: main.cmd
       shell: cmd
-    - name: Upload Release.zip
+    - name: Upload Files
       uses: actions/upload-artifact@v2
       with:
         name: Release
-        path: Release.zip 
-    - name: Make Installers
-      run: nsis.cmd
-      shell: cmd
-    - name: Upload NSIS exe files
-      uses: actions/upload-artifact@v2
-      with: 
-        name: NSIS exe files
         path: |
+          Release.zip 
           Moonlight.exe
           Spotlight.exe
     - name: Make a release     

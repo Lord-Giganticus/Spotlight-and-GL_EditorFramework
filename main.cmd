@@ -1,0 +1,1 @@
+Update_Submodules.cmd && nuget_restore.cmd && build.cmd && zip.cmd && nsis.cmd
