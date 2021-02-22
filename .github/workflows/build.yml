@@ -19,11 +19,15 @@ jobs:
     - name: Run Scripts
       run: Update_Submodules.cmd && nuget_restore.cmd && build.cmd && zip.cmd
       shell: cmd
-    - name: Upload Artifacts
+    - name: Upload Release.zip
       uses: actions/upload-artifact@v2
       with:
         name: Release
         path: Release.zip
+        
+#   - name: Installers
+    # run: nsis.cmd
+    # shell: cmd
     - name: Make a release     
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
