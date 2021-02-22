@@ -352,3 +352,7 @@ MigrationBackup/
 # Custom
 Pull-Push.cmd
 *.zip
+Moonlight Debug/
+Moonlight Release/
+Spotlight Debug/
+Spotlight Release/
