@@ -28,6 +28,7 @@ jobs:
       run: nsis.cmd
       shell: cmd
     - name: Upload NSIS exe files
+      uses: actions/upload-artifact@v2
       with: 
         name: NSIS exe files
         path: |
