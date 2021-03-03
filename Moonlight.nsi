@@ -30,7 +30,7 @@ Section "" ;No components page, name is not important
   SetOutPath $INSTDIR
   
   ; Put file there
-  File "Moonlight Release.zip"
-  File "Moonlight Debug.zip"
+  File /r "Moonlight Debug"
+  File /r "Moonlight Release"
   
 SectionEnd ; end the section

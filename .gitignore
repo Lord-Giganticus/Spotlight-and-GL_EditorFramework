@@ -354,3 +354,7 @@ Pull-Push.cmd
 *.zip
 *.exe
 *.ico
+Moonlight Debug
+Moonlight Release
+Spotlight Debug
+Spotlight Release

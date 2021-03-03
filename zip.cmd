@@ -11,4 +11,7 @@ cd "../Debug OdysseySupport"
 7z a -r "Moonlight Debug.zip" *
 mv "Moonlight Debug.zip" ../../../../.
 cd ../../../../
-7z a -r Release.zip *.zip
+7z x "Moonlight Debug.zip" -o"Moonlight Debug"
+7z x "Moonlight Release.zip" -o"Moonlight Release"
+7z x "Spotlight Debug.zip" -o"Spotlight Debug"
+7z x "Spotlight Release.zip" -o"Spotlight Release"

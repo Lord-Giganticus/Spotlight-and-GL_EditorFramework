@@ -30,7 +30,7 @@ Section "" ;No components page, name is not important
   SetOutPath $INSTDIR
   
   ; Put file there
-  File "Spotlight Release.zip"
-  File "Spotlight Debug.zip"
+  File /r "Spotlight Debug"
+  File /r "Spotlight Release"
   
 SectionEnd ; end the section
