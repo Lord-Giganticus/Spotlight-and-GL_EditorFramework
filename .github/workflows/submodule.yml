@@ -1,4 +1,4 @@
-name: Daily Submodule Check
+name: Submodule Check
 
 on:
   workflow_dispatch:
