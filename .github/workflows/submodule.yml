@@ -2,8 +2,6 @@ name: Daily Submodule Check
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 14 * * *"
 
 jobs:
   submodule:
@@ -22,3 +20,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add *
         git commit -m "Update Submodules" -a
+        git push
