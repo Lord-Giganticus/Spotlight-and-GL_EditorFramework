@@ -1,14 +1,1 @@
-# Spotlight-and-GL_EditorFramework
-A "Fork" of Spotlight intended to make compiling much easier.
-# Info
-- At 8 AM CST (2:00 PM GMT), Github Actions will check if [Spotlight](https://github.com/jupahe64/Spotlight) or [GL_EditorFramework](https://github.com/jupahe64/GL_EditorFramework) have been updated and if so will update this repo.
-- Ten minutes after that, Github actions will build Spotlight and make a daily release under ALL configurations.
-# Compiling on your own
-Requirements: 
-- [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2019) added to PATH. (The latest msbuild lives at `C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin` if you Visual Studio installed to the default location.)
-- [nuget](https://www.nuget.org) installed to PATH. (Get it from [Chocolatey](https://chocolatey.org/install) by running `choco install nuget.commandline --pre`)
-- [7zip](https://www.7-zip.org/)'s command line program `7z.exe` installed to PATH. (Default location should be `C:\Program Files\7-Zip`)
-- [NSIS](https://nsis.sourceforge.io/Download)'s command line program `makensis.exe` installed to PATH. (Default location should be `C:\Program Files (x86)\NSIS`)
-
-Steps:
-- Simply double click on `main.cmd`.
+**Archived in favor of https://github.com/Lord-Giganticus/Spotlight**
